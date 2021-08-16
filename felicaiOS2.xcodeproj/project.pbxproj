@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F6BC10C26CA49C900EFF2CD /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F6BC10B26CA49C900EFF2CD /* ContainerViewController.swift */; };
+		0F7D575B26C5688D00851E73 /* readViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F7D575A26C5688D00851E73 /* readViewController.swift */; };
 		0FB5861C26C5411B003A4078 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB5861B26C5411B003A4078 /* AppDelegate.swift */; };
 		0FB5861E26C5411B003A4078 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB5861D26C5411B003A4078 /* SceneDelegate.swift */; };
 		0FB5862026C5411B003A4078 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB5861F26C5411B003A4078 /* ViewController.swift */; };
@@ -35,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F6BC10B26CA49C900EFF2CD /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		0F7D575A26C5688D00851E73 /* readViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = readViewController.swift; sourceTree = "<group>"; };
+		0F7D575C26C5788500851E73 /* felicaiOS2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = felicaiOS2.entitlements; sourceTree = "<group>"; };
 		0FB5861826C5411B003A4078 /* felicaiOS2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = felicaiOS2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FB5861B26C5411B003A4078 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FB5861D26C5411B003A4078 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,10 +104,13 @@
 		0FB5861A26C5411B003A4078 /* felicaiOS2 */ = {
 			isa = PBXGroup;
 			children = (
+				0F7D575C26C5788500851E73 /* felicaiOS2.entitlements */,
 				0FB5861B26C5411B003A4078 /* AppDelegate.swift */,
 				0FB5861D26C5411B003A4078 /* SceneDelegate.swift */,
 				0FB5861F26C5411B003A4078 /* ViewController.swift */,
+				0F7D575A26C5688D00851E73 /* readViewController.swift */,
 				0FB5862126C5411B003A4078 /* Main.storyboard */,
+				0F6BC10B26CA49C900EFF2CD /* ContainerViewController.swift */,
 				0FB5862426C5411C003A4078 /* Assets.xcassets */,
 				0FB5862626C5411C003A4078 /* LaunchScreen.storyboard */,
 				0FB5862926C5411C003A4078 /* Info.plist */,
@@ -260,6 +268,8 @@
 			files = (
 				0FB5862026C5411B003A4078 /* ViewController.swift in Sources */,
 				0FB5861C26C5411B003A4078 /* AppDelegate.swift in Sources */,
+				0F6BC10C26CA49C900EFF2CD /* ContainerViewController.swift in Sources */,
+				0F7D575B26C5688D00851E73 /* readViewController.swift in Sources */,
 				0FB5861E26C5411B003A4078 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,9 +446,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = felicaiOS2/felicaiOS2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X72VXGZ9C2;
 				INFOPLIST_FILE = felicaiOS2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,9 +467,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = felicaiOS2/felicaiOS2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X72VXGZ9C2;
 				INFOPLIST_FILE = felicaiOS2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

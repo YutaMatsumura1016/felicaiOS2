@@ -1,24 +1,160 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="top" id="BYZ-38-t0r" customClass="ViewController" customModule="felicaiOS2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugM-OA-NF3">
+                                <rect key="frame" x="20" y="376" width="335" height="41"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="24"/>
+                                <state key="normal" title="ログイン">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="Login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5la-zP-j5p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WTM-t0-Gm3">
+                                <rect key="frame" x="20" y="274" width="335" height="41"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="24"/>
+                                <state key="normal" title="早稲田">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="Waseda:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ADO-DP-eBf"/>
+                                    <segue destination="FqG-On-00A" kind="presentation" identifier="toWaseda" id="VBg-3M-H6W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gxa-Ri-PDv">
+                                <rect key="frame" x="20" y="325" width="335" height="41"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="24"/>
+                                <state key="normal" title="戸 山">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="Toyama:" destination="BYZ-38-t0r" eventType="touchUpInside" id="75u-we-hN6"/>
+                                    <segue destination="FqG-On-00A" kind="presentation" identifier="toToyama" id="j4a-6W-udi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N2Y-Ju-gX7">
+                                <rect key="frame" x="20" y="606" width="335" height="41"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="24"/>
+                                <state key="normal" title="閉じる">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="close:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ebr-xh-ODD"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Gxa-Ri-PDv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4H1-tH-F9A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gxa-Ri-PDv" secondAttribute="trailing" constant="20" id="7Fo-HG-mDF"/>
+                            <constraint firstItem="ugM-OA-NF3" firstAttribute="top" secondItem="Gxa-Ri-PDv" secondAttribute="bottom" constant="10" id="7tz-NX-uHy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="N2Y-Ju-gX7" secondAttribute="trailing" constant="20" id="JvW-xz-KMl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ugM-OA-NF3" secondAttribute="trailing" constant="20" id="Nsg-kw-2Ef"/>
+                            <constraint firstItem="Gxa-Ri-PDv" firstAttribute="top" secondItem="WTM-t0-Gm3" secondAttribute="bottom" constant="10" id="PeL-UP-OVb"/>
+                            <constraint firstItem="ugM-OA-NF3" firstAttribute="top" secondItem="Gxa-Ri-PDv" secondAttribute="bottom" constant="10" id="QLg-ZE-PJh"/>
+                            <constraint firstItem="ugM-OA-NF3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UgH-0o-7Pr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ugM-OA-NF3" secondAttribute="bottom" constant="250" id="b2x-y6-rHn"/>
+                            <constraint firstItem="WTM-t0-Gm3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="evn-L0-GMF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WTM-t0-Gm3" secondAttribute="trailing" constant="20" id="fz6-v4-xyl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="N2Y-Ju-gX7" secondAttribute="bottom" constant="20" id="gvE-DL-YBI"/>
+                            <constraint firstItem="N2Y-Ju-gX7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="waV-mN-tIV"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonToyama" destination="Gxa-Ri-PDv" id="IIn-Ld-bO5"/>
+                        <outlet property="buttonWaseda" destination="WTM-t0-Gm3" id="7H5-Lh-bKf"/>
+                        <outlet property="loginButton" destination="ugM-OA-NF3" id="yAQ-k6-ukq"/>
+                        <outlet property="loginFinish" destination="N2Y-Ju-gX7" id="f5D-OE-6TG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-16.800000000000001" y="116.49175412293854"/>
+        </scene>
+        <!--Read View Controller-->
+        <scene sceneID="yEs-pS-cRa">
+            <objects>
+                <viewController storyboardIdentifier="read" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="FqG-On-00A" customClass="readViewController" customModule="felicaiOS2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Get-Pg-Ob6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6D-c8-9x1">
+                                <rect key="frame" x="20" y="555" width="335" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="読み取り開始"/>
+                                <connections>
+                                    <action selector="beginScanning:" destination="FqG-On-00A" eventType="touchUpInside" id="ZnJ-1i-vAG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XdW-R9-qaG">
+                                <rect key="frame" x="20" y="611" width="335" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IV2-B5-Ek1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="298"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            </containerView>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dl0-2x-o1Y">
+                                <rect key="frame" x="0.0" y="20" width="375" height="278"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fhP-B2-dfr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fhP-B2-dfr" firstAttribute="bottom" secondItem="XdW-R9-qaG" secondAttribute="bottom" constant="20" id="1vA-KI-Vfq"/>
+                            <constraint firstItem="fhP-B2-dfr" firstAttribute="trailing" secondItem="XdW-R9-qaG" secondAttribute="trailing" constant="20" id="HLg-gc-BL0"/>
+                            <constraint firstItem="XdW-R9-qaG" firstAttribute="leading" secondItem="fhP-B2-dfr" secondAttribute="leading" constant="20" id="OBW-mP-V5K"/>
+                            <constraint firstItem="fhP-B2-dfr" firstAttribute="trailing" secondItem="p6D-c8-9x1" secondAttribute="trailing" constant="20" id="aBz-Qo-fj6"/>
+                            <constraint firstItem="p6D-c8-9x1" firstAttribute="leading" secondItem="fhP-B2-dfr" secondAttribute="leading" constant="20" id="cdH-Bh-o5m"/>
+                            <constraint firstItem="XdW-R9-qaG" firstAttribute="top" secondItem="p6D-c8-9x1" secondAttribute="bottom" constant="20" id="zc3-C7-qOX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="XdW-R9-qaG" id="Nhe-7f-tY4"/>
+                        <outlet property="startButton" destination="p6D-c8-9x1" id="z7M-2O-xWX"/>
+                        <outlet property="webView" destination="Dl0-2x-o1Y" id="xLk-8L-QeM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c2k-QD-lRW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="757.60000000000002" y="115.59220389805098"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="VBg-3M-H6W"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
